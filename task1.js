@@ -1,23 +1,25 @@
-Zadanie 1. Pakowanie towarów
+// Zadanie 1. Pakowanie towarów
 
-Napisz funkcję isEnoughCapacity(products, containerSize), która oblicza, czy wszystkie towary zmieszczą się w kontenerze podczas pakowania.
+// Napisz funkcję isEnoughCapacity(products, containerSize), która oblicza, czy wszystkie towary zmieszczą się w kontenerze podczas pakowania.
 
-Funkcja deklaruje dwa parametry:
+// Funkcja deklaruje dwa parametry:
 
-products — obiekt, w którym klucze zawierają nazwy towarów, a ich wartości — ilość tych towarów. Na przykład { apples: 2, grapes: 4 }.
-containerSize — liczba, maksymalna ilość jednostek towaru, którą może pomieścić kontener.
+// products — obiekt, w którym klucze zawierają nazwy towarów, a ich wartości — ilość tych towarów. Na przykład { apples: 2, grapes: 4 }.
+// containerSize — liczba, maksymalna ilość jednostek towaru, którą może pomieścić kontener.
 
-products = {
-    apples: 2,
-    grapes: 4,
-    pears: 7
+const isEnoughCapacity = (products, containerSize) => {
+   let total = 0;
+   for(let product in products) {
+    total += products[product];
+   }
+   return total <= containerSize
 }
 
-Funkcja powinna zwrócić wynik sprawdzenia, czy wszystkie towary zmieszczą się w kontenerze. Czyli policzyć łączną ilość towarów w obiekcie products i zwrócić true, jeśli jest ona mniejsza lub równa containerSize, i false, jeśli nie.
+// Funkcja powinna zwrócić wynik sprawdzenia, czy wszystkie towary zmieszczą się w kontenerze. Czyli policzyć łączną ilość towarów w obiekcie products i zwrócić true, jeśli jest ona mniejsza lub równa containerSize, i false, jeśli nie.
 
 
 
-Weź poniższy kod i wstaw go po deklaracji swojej funkcji, aby sprawdzić poprawność jej działania. W konsoli zostaną wyświetlone wyniki jej wywołań.
+// Weź poniższy kod i wstaw go po deklaracji swojej funkcji, aby sprawdzić poprawność jej działania. W konsoli zostaną wyświetlone wyniki jej wywołań.
 
 
 
